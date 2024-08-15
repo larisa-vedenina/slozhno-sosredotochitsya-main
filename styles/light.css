@@ -1,0 +1,47 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+@media (prefers-color-scheme: light) {
+  .page {
+    --accent-color: #ff8dcb;
+    --text-color: #353430;
+    --menu-color: #353430;
+    --font-family: "IBM Plex Mono", monospace;
+    --title-color: #ffc2e6;
+    --section-title: #353430;
+    --title-text-color: #353430;
+    --background-color: #fff1f7;
+    --background-image: url(/..images/cover-image-light.png);
+    --text-shadow: 4px 4px 0 var(--accent-color);
+    --link-shadow: 2px 2px 0 var(--accent-color);
+    --menu-button_hover: rgb(53, 52, 48, 0.5);
+
+    .rec::before,
+    .rec::after {
+      display: none;
+    }
+  }
+}
+
+.page.theme_light {
+  --accent-color: #ff8dcb;
+  --text-color: #353430;
+  --menu-color: #353430;
+  --font-family: "IBM Plex Mono", monospace;
+  --title-color: #ffc2e6;
+  --section-title: #353430;
+  --title-text-color: #353430;
+  --background-color: #fff1f7;
+  --background-image: url(../images/cover-image-light.png);
+  --text-shadow: 4px 4px 0 var(--accent-color);
+  --link-shadow: 2px 2px 0 var(--accent-color);
+  --menu-button_hover: rgb(53, 52, 48, 0.5);
+
+  .rec::before,
+  .rec::after {
+    display: none;
+  }
+}

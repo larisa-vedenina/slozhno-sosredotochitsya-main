@@ -1,0 +1,396 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: var(--background-image);
+  background-color: var(--background-color);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.header {
+  display: grid;
+  block-size: 100vh;
+  min-block-size: 668px;
+  grid-template-rows: 0 1fr min-content 1fr;
+  padding: 20px 20px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  grid-template-columns: repeat(3, 70px);
+  justify-self: center;
+  gap: 10px;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 100%;
+  text-align: center;
+  color: var(--menu-color);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button {
+  border: none;
+  background-color: transparent;
+  padding: 0px 13px;
+  width: 70px;
+  min-height: 26px;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--menu-color);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-button_hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--menu-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 20px;
+  top: 20px;
+  border-block-start: 1px solid var(--menu-color);
+  border-inline-end: 1px solid var(--menu-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-start: 20px;
+  bottom: 20px;
+  border-inline-start: 1px solid var(--menu-color);
+  border-block-end: 1px solid var(--menu-color);
+}
+
+.rec::before {
+  content: "rec";
+  position: absolute;
+  display: block;
+  font-family: var(--font-family);
+  line-height: 139%;
+  color: var(--menu-color);
+  text-transform: uppercase;
+  inset-inline-end: 48px;
+  top: 20px;
+}
+
+.rec::after {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--menu-color);
+  box-shadow: 0 0 4px 2px var(--menu-color);
+  inset-inline-end: 29px;
+  top: 28px;
+}
+
+.main-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: var(--text-shadow);
+  margin-inline-start: -20px;
+}
+
+.title-decor {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--title-text-color);
+  background-color: var(--accent-color);
+}
+
+.header_title-text {
+  justify-self: end;
+  align-self: center;
+  width: 491px;
+  height: fit-content;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+}
+
+.content:not(:last-child) {
+  gap: 80px;
+}
+
+.content__section_main-question {
+  display: grid;
+  grid-template-columns: 32% 2fr;
+  gap: 20px;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--section-title);
+}
+
+.section-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-text {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  margin-block-start: 10px;
+}
+
+.text-allocated {
+  text-shadow: var(--link-shadow);
+  text-decoration: none;
+}
+
+.text-allocated:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.text-allocated:focus {
+  outline: none;
+}
+
+.text-allocated:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+.section_reasons-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-block-start: 20px;
+}
+
+.reasons-title {
+  width: 315px;
+}
+
+.content__section_advice {
+  display: grid;
+  grid-template-columns: 32% auto;
+  gap: 20px;
+}
+
+.title-normal {
+  font-weight: 400;
+}
+
+.content__section_gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content auto auto auto;
+  gap: 20px;
+  grid-template-areas:
+    "title title title"
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+}
+
+.section_gallery-img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-title {
+  grid-area: title;
+}
+.sunset {
+  grid-area: sunset;
+}
+.ice-cream {
+  grid-area: ice-cream;
+}
+.books {
+  grid-area: books;
+}
+.tape {
+  grid-area: tape;
+}
+.street {
+  grid-area: street;
+}
+
+.footer {
+  display: flex;
+  block-size: 100vh;
+  min-block-size: 668px;
+  justify-content: center;
+  align-items: center;
+  --text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.footer_title {
+  padding-inline-start: 20px;
+}
+
+@media (768px <= width < 1024px) {
+  .main-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-columns: 70px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: end;
+  }
+
+  .header__theme-menu {
+    align-self: center;
+  }
+
+  .header_title-text {
+    width: 364px;
+    height: fit-content;
+  }
+
+  .section_reasons-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px;
+  }
+
+  .reasons-title {
+    width: 236px;
+  }
+}
+
+@media (375px <= width < 768px) {
+  .main-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header {
+    padding: 0px 10px;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-columns: 70px;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: end;
+  }
+
+  .header__theme-menu {
+    align-self: center;
+    padding-block-start: 5px;
+  }
+
+  .main-title {
+    margin-inline-start: 0px;
+  }
+
+  .header_title-text {
+    width: 355px;
+    height: fit-content;
+    margin-block-end: 10px;
+  }
+
+  .content {
+    padding: 40px 10px 40px 10px;
+  }
+
+  .content:not(:last-child) {
+    gap: 50px;
+  }
+
+  .content__section_main-question {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .section_reasons-cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 20px;
+  }
+
+  .reasons-title {
+    width: 236;
+  }
+
+  .content__section_advice {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .content__section_gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    grid-template-areas:
+      "title"
+      "sunset"
+      "ice-cream"
+      "tape"
+      "books"
+      "street";
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 10px;
+    top: 10px;
+  }
+
+  .decorated-zone::after {
+    inset-inline-start: 10px;
+    bottom: 10px;
+  }
+
+  .rec::before {
+    inset-inline-end: 38px;
+    top: 10px;
+  }
+
+  .rec::after {
+    inset-inline-end: 19px;
+    top: 18px;
+  }
+
+  .footer_title {
+    padding-inline-start: 4px;
+  }
+}

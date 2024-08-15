@@ -1,0 +1,19 @@
+.page.theme_dark {
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+  --menu-color: #ff0070;
+  --font-family: "IBM Plex Mono", monospace;
+  --title-color: #db00ff;
+  --title-text-color: #000028;
+  --section-title: #ff0070;
+  --background-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
+  --text-shadow: 4px 4px 0 var(--accent-color);
+  --link-shadow: 2px 2px 0 var(--accent-color);
+  --menu-button_hover: rgb(255, 0, 112, 0.4);
+
+  .rec::before,
+  .rec::after {
+    display: block;
+  }
+}
