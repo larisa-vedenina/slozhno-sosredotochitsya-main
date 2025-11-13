@@ -38,3 +38,17 @@
 - Lazy loading для изображений
 - Оптимизированные CSS-стили
 - Минимизация перерисовок
+
+## Установка и запуск
+
+1. Клонируйте репозиторий:
+
+git clone https://github.com/larisa-vedenina/slozhno-sosredotochitsya-main.git
+
+2. Перейдите в директорию проекта:
+
+cd slozhno-sosredotochitsya-main
+
+3. Откройте index.html в браузере или используйте Live Server:
+
+npx live-server

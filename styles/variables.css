@@ -1,15 +1,10 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-
 :root {
   --accent-color: #ff0070;
-  --text-color: #F1B2CE;
+  --text-color: #f1b2ce;
   --menu-color: #ff0070;
   --font-family: "IBM Plex Mono", monospace;
-  --title-color: #DB00FF;
-  --section-title: #FF0070;
+  --title-color: #db00ff;
+  --section-title: #ff0070;
   --title-text-color: #000028;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
@@ -17,4 +12,3 @@
   --link-shadow: 2px 2px 0 var(--accent-color);
   --menu-button_hover: rgb(255, 0, 112, 0.5);
 }
-
